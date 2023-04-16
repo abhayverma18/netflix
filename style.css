@@ -1,0 +1,266 @@
+* {
+   margin : 0;
+}
+
+body{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #111;
+    
+    color :white;
+}
+
+
+#banner {
+    background-size: cover;
+    color:white;
+    height: 500px;
+    background-repeat: no-repeat;
+}
+
+.banner-content {
+    margin-left: 30px;
+    padding-top: 140px;
+    height : 190px;
+    user-select : none;
+}
+
+#banner-title {
+    font-size : 3rem;
+    font-weight : 800;
+    font-family : monospace;
+    padding-bottom : 0.3rem;
+    user-select: none;
+}
+
+#banner-description {
+  width : 45rem;
+  line-height: 1.3rem;
+  padding-top: 1rem;
+  height : 80px;
+  font-size: 1rem;
+  max-width: 500px;
+  user-select : none;
+}
+
+.banner-button , button {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    margin-right: 1rem;
+    font-weight: 700;
+    border-radius: 2px;
+    background-color : rgba(51,51,51,0.5);
+    padding-left: o.5rem 2rem;
+}
+.banner-button:hover , #play:hover {
+    color: #000;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}
+ .banner-fade{
+    height: 11rem;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37,37,37,0.61),
+        #111
+    );
+ }
+ 
+.row{
+    margin-left : 20px;
+    margin-top : 5px;
+    user-select: none;
+}
+.image-container{
+    display : flex;
+    padding: 10px;
+    overflow-x: scroll;
+    overflow-y:hidden;
+}
+.image-container::-webkit-scrollbar{
+    width: 0;
+    background: rgba(0,0,0,0.1);
+}
+.image{
+    width: 100%;
+    max-height : 100px;
+    object-fit : contain;
+    margin-right : 10px;
+    transition : transform 450ms;
+    cursor: pointer;
+}
+.image:hover{
+    transform: scale(1.08);
+}
+
+.container{
+    width : 60%;
+    display: none;
+    justify-content: space-between;
+    max-height : 500px;
+     margin :20px auto;
+     background-color : black;
+     position : fixed;
+     left : 50%;
+     top : 50%;
+     transform : translate(-50% ,-50%);
+}
+
+#movieposter img{
+    max-height : 500px;
+}
+
+.details {
+    padding : 10px 20px;
+}
+
+#title{
+    font-size :3rem;
+    font-weight: 800;
+    font-family: monospace;
+    user-select: none;
+}
+.small-details{
+    display :flex;
+    padding : 0px;
+    user-select: none;
+}
+#language {
+    border-left : 2px solid white;
+    border-right : 2px solid white;
+    user-select: none;
+}
+.small-details p{
+    padding : 1px 10px;
+    user-select: none;
+}
+#description{
+    font-size : 0.8rem;
+    padding-top : 1rem;
+    line-height : 1.3rem;
+    user-select: none;
+}
+
+#play {
+    margin-top : 20px;
+    user-select: none;
+} 
+
+#close {
+    position: relative;
+    right :10px;
+    height : fit-content;
+    top : 10px;
+    border : none;
+    border-radius : 150px;
+    font-size :20px;
+    padding : 5px 12px;
+    cursor : pointer;
+    font-weight : 600;
+}
+.nav{
+    width :100%;
+    display :flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    height :30px;
+    padding :20px;
+    transition-timing-function : ease-in;
+    transition: all 0.5s;
+}
+.logo{
+    width: 80px;
+    object-fit: contain;
+    position: fixed;
+    left: 20px;
+    top :10px;
+}
+.sideIcon{
+    object-fit : contain;
+    width :40px;
+    position: fixed;
+    right: 20px;
+}
+
+@media only screen  and  ( max-width:1150px){
+        .banner-content{
+            height:fit-content;
+        }
+
+        #banner{
+            background-size: cover;
+            height:auto;
+            background-position: center;
+/* background-attachment: fixed; */
+            width:auto;
+        }
+
+        #banner-description{
+            height:fit-content;
+            width:fit-content;
+              
+        }
+        .banner-fade{
+        height: 25px;   
+        }
+        #movieposter img{
+            height :400px;
+        }
+        .container{
+            max-height:fit-content;
+            width:fit-content;
+        }
+        #title{
+            font-size:2rem;
+            font-weight:600;
+        }
+        #movieposter img{
+            height:400px;
+        }
+        #close{
+            display:flex;
+        }
+        
+
+}
+
+@media only screen and   (max-width:768px){
+    .banner-content{
+        height:fit-content;
+    }
+    #banner{
+        background-size:cover;
+        height:auto;
+        width:auto;
+        background-position:center;
+        background-attachment:fixed;
+    }
+    #banner-description{
+        height:fit-content;
+        width:fit-content;
+
+    }
+    #movieposter img{
+        height:300px;
+
+    }
+    .container {
+          max-height:fit-content;
+          max-width: fit-content;      
+    }
+    #title{
+        font-size:1rem;
+        font-weight:600;
+
+    }
+    #description{
+        height:fit-content;
+        width: fit-content;
+    }
+    #close{
+        position:static;
+    }
+}
